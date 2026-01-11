@@ -16,7 +16,7 @@ default_args = {
 with DAG(
     dag_id='11_deployment_test_dag',
     default_args=default_args,
-    schedule_interval=None,
+    schedule=None,
     catchup=False,
     tags=['test', 'deployment'],
 ) as dag:

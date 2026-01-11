@@ -5,7 +5,7 @@ import pendulum
 with DAG(
     dag_id='12_slack_test_dag',
     start_date=pendulum.today('UTC').add(days=-1),
-    schedule_interval=None,
+    schedule=None,
     catchup=False,
     tags=['slack', 'test'],
 ) as dag:
