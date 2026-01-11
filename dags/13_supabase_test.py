@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 import pendulum
 
 # Define the DAG
@@ -12,9 +12,9 @@ with DAG(
 ) as dag:
 
     # 1. Create a test table
-    create_table = PostgresOperator(
+    create_table = SQLExecuteQueryOperator(
         task_id='create_table',
-        postgres_conn_id='supabase_conn',
+        conn_id='supabase_conn',
         sql="""
             CREATE TABLE IF NOT EXISTS airflow_test_table (
                 id SERIAL PRIMARY KEY,
@@ -25,9 +25,9 @@ with DAG(
     )
 
     # 2. Insert test data
-    insert_data = PostgresOperator(
+    insert_data = SQLExecuteQueryOperator(
         task_id='insert_data',
-        postgres_conn_id='supabase_conn',
+        conn_id='supabase_conn',
         sql="""
             INSERT INTO airflow_test_table (message) 
             VALUES ('Hello from Airflow! Supabase Connection SUCCESS :)');
