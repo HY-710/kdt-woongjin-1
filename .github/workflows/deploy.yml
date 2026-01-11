@@ -21,7 +21,7 @@ jobs:
           port: 22
           script: |
             # 1. 유저님이 선호하는 DAGs 폴더로 이동
-            cd ~/airflow/dags
+            cd ~/kdt-woongjin
             
             # 2. 만약 해당 폴더가 git 레포가 아니라면 초기 설정
             if [ ! -d ".git" ]; then
@@ -34,4 +34,4 @@ jobs:
             git reset --hard origin/main
             
             # 4. 권한 설정 (Docker 컨테이너가 파일을 읽을 수 있도록 허용)
-            sudo chown -R datapopcorn:datapopcorn ~/airflow/dags
+            sudo chown -R datapopcorn:datapopcorn ~/kdt-woongjin
