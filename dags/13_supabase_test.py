@@ -6,7 +6,7 @@ import pendulum
 with DAG(
     dag_id='13_supabase_test_dag',
     start_date=pendulum.today('UTC').add(days=-1),
-    schedule=None,
+    schedule='0 0 * * *',
     catchup=False,
 ) as dag:
 

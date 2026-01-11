@@ -21,7 +21,7 @@ PROCESSED_DIR = os.path.join(DATA_DIR, 'processed')
 with DAG(
     dag_id="17_static_file_loader",
     start_date=pendulum.datetime(2025, 1, 1, tz='Asia/Seoul'),
-    schedule=None, # 수동 실행 (Trigger Only)
+    schedule='0 9 * * *', # 수동 실행 (Trigger Only)
     catchup=False,
     default_args=default_args,
     tags=['utility', 'file_upload', 'supabase'],
