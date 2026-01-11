@@ -7,7 +7,6 @@ with DAG(
     start_date=pendulum.today('UTC').add(days=-1),
     schedule=None,
     catchup=False,
-    tags=['slack', 'test'],
 ) as dag:
 
     send_slack = SlackWebhookOperator(

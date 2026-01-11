@@ -8,7 +8,6 @@ with DAG(
     start_date=pendulum.today('UTC').add(days=-1),
     schedule=None,
     catchup=False,
-    tags=['supabase', 'db', 'test'],
 ) as dag:
 
     # 1. Create a test table

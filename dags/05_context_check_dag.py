@@ -22,7 +22,6 @@ with DAG(
     dag_id="05_context_check_dag",
     start_date=pendulum.datetime(2025, 8, 1, tz='Asia/Seoul'),
     schedule="30 10 * * *",
-    tags = ['20250824','BASIC'],
     default_args = default_args,
     catchup=False
 ):

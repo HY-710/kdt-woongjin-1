@@ -18,7 +18,6 @@ with DAG(
     default_args=default_args,
     schedule=None,
     catchup=False,
-    tags=['test', 'deployment'],
 ) as dag:
 
     hello_task = PythonOperator(
