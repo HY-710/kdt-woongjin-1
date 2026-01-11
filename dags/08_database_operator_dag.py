@@ -17,7 +17,7 @@ https://airflow.apache.org/docs/apache-airflow-providers-common-sql/stable/_api/
 default_args = dict(
     owner = 'popcorn',
     email = ['datapopcorn@gmail.com'],
-    email_on_failure = False,
+    email_on_failure = True,
     retries = 3
     )
 

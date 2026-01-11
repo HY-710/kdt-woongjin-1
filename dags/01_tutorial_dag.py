@@ -5,7 +5,7 @@ from airflow.providers.standard.operators.empty import EmptyOperator
 default_args = dict(
     owner = 'popcorn', # 개별 DAG 관리자
     email = ['datapopcorn@gmail.com'],
-    email_on_failure = False,
+    email_on_failure = True,
     retries = 3
     )
 

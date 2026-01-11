@@ -9,7 +9,7 @@ import requests
 default_args = dict(
     owner = 'popcorn',
     email = ['datapopcorn@gmail.com'],
-    email_on_failure = False,
+    email_on_failure = True,
     retries = 3
     )
 
