@@ -17,7 +17,7 @@ default_args = dict(
 )
 
 with DAG(
-    dag_id="16_seoul_subway_stats",
+    dag_id="popcorn_16_seoul_subway_stats",
     start_date=pendulum.datetime(2025, 1, 1, tz='Asia/Seoul'), # 데이터가 있는 과거 시점 설정
     schedule="0 10 * * *",  # 매일 오전 10시 실행 (전일 데이터 집계)
     catchup=False,

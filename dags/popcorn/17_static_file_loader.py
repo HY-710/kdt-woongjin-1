@@ -19,7 +19,7 @@ DATA_DIR = os.path.join(os.environ.get('AIRFLOW_HOME', '/opt/airflow'), 'dags/da
 PROCESSED_DIR = os.path.join(DATA_DIR, 'processed')
 
 with DAG(
-    dag_id="17_static_file_loader",
+    dag_id="popcorn_17_static_file_loader",
     start_date=pendulum.datetime(2025, 1, 1, tz='Asia/Seoul'),
     schedule='0 9 * * *', # 수동 실행 (Trigger Only)
     catchup=False,

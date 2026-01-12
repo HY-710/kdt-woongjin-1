@@ -22,7 +22,7 @@ default_args = dict(
 )
 
 with DAG(
-    dag_id="14_seoul_subway_monitor",
+    dag_id="popcorn_14_seoul_subway_monitor",
     start_date=pendulum.today('Asia/Seoul').add(days=-1),
     schedule="*/5 * * * *",  # 5분마다 실행
     catchup=False,

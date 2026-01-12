@@ -3,7 +3,7 @@ from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
 import pendulum
 
 with DAG(
-    dag_id='12_slack_test_dag',
+    dag_id='popcorn_12_slack_test_dag',
     start_date=pendulum.today('UTC').add(days=-1),
     schedule='0 0 * * *',
     catchup=False,

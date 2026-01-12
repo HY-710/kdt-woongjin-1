@@ -19,7 +19,7 @@ default_args = dict(
     )
 
 with DAG(
-    dag_id="09_db_pipeline_dag",
+    dag_id="popcorn_09_db_pipeline_dag",
     start_date=pendulum.datetime(2025, 8, 1, tz='Asia/Seoul'),
     schedule="30 10 * * *",
     default_args = default_args,

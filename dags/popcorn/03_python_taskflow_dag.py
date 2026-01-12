@@ -17,7 +17,7 @@ default_args = dict(
     )
 
 with DAG(
-    dag_id="03_python_taskflow_dag",
+    dag_id="popcorn_03_python_taskflow_dag",
     start_date=pendulum.datetime(2025, 8, 1, tz='Asia/Seoul'),
     schedule="30 10 * * *",
     default_args = default_args,
