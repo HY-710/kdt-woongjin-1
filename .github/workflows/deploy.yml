@@ -60,7 +60,7 @@ jobs:
       - name: Deploy to VM via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: 34.56.112.10
+          host: 35.192.43.43
           username: datapopcorn
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
