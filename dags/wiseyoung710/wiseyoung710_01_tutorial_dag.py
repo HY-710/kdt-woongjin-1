@@ -2,7 +2,7 @@ import pendulum
 from airflow import DAG
 from airflow.providers.standard.operators.empty import EmptyOperator
 
-default_args = dict(
+default_args = dict( # default_args: 기본값
     owner = 'wiseyoung710', # 개별 DAG 관리자
     email = ['wiseyoung710@gmail.com'],
     email_on_failure = False,
